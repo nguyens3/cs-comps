@@ -1,1 +1,78 @@
+Bandit OvertheWire solutions
+- Sydney Nguyen 
+
+Level 0: 
+open command prompt then connect to bandit
+  ssh -p 2220 bandit0@bandit.labs.overthewire.org 
+Password: bandit0
+
+0 -> 1: 
+ls to see all files 
+cat readme
+Password: NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
+
+1 -> 2: 
+ls to see all files 
+cat ./-
+Password: rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
+
+2 -> 3: 
+ls to see all files 
+cat "spaces in filenames"
+Password: aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
+
+3 -> 4:
+ls to see all files
+cd inhere
+find 
+cat ./.hidden
+Password:2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
+
+4 -> 5:
+ls to see all files 
+cd inhere 
+find 
+cat ./-file07
+Password: lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+
+5 -> 6:
+ls to see all files
+cd inhere
+find -type f -size 1033c
+cd maybehere07
+Password:P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+
+6 -> 7:
+find / -type f -user bandit7 -group 2>/dev/nullze 33c 2>/dev/null
+ ''' 2>/dev/null - gets rid of the error messages making it easier to find the file '''
+cat /var/lib/dpkg/info/bandit7.password
+Password: /var/lib/dpkg/info/bandit7.password
+
+7 -> 8:
+ls to see all files 
+cat data.txt | grep "millionth"
+Password: TESKZC0XvTetK0S9xNwm25STk5iWrBvP
+
+8 -> 9: 
+sort --> because unique only recognizes unique lines adjacent to one another 
+sort data.txt| uniq -u  
+Password: EN632PlfYiZbn3PhVK3XOGSlNInNE00t
+
+9 -> 10: 
+ cat data.txt| strings | grep =
+Password: G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+
+10 -> 11: 
+cat data.txt | base64 --decode
+Password:6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM
+
+11 -> 12:
+tr ---> translate {tr [original set][desired set]}
+cat data.txt | tr '[A-Za-z]' '[N-ZA-Mn-za-m]'
+Password: JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
+
+12 -> 13
+
+Make directory then unzip a bunch?
+
 
