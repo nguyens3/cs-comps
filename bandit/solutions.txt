@@ -73,6 +73,8 @@ Password: JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
 
 12 -> 13
 
-Make directory then unzip a bunch?
+mkdir /tmp/temporary
+cp data.txt /tmp/temporary
+
 
 
