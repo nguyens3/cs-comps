@@ -208,3 +208,15 @@ Password: NvEJF7oVjkddltPSrdKEFOllh9V1IBcq
 cd /ect/cron.d/
 ls
 cat cronjob_bandit22
+cat /usr/bbin/cronjob_bandit22.sh #/bin/bash
+
+
+
+Notes: 
+cron refers to time 
+*** refers to once a minute 
+chmod Base 8 
+644 means -> 110 100 100 
+             rw- r-- r-- read write no execute ect. 
+@reboot gets rescheduled at every reboot of the computer 
+
