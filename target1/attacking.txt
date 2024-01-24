@@ -1,1 +1,10 @@
+Attacking Manic Meese
 
+Step 1. Obtain Ip address utilizing nmap in the terminal or VWARE gives the IP on the home interface upon boot of the machine
+Step 2. port scan the ip adresses
+Step 3. See apache server and SSH ports are open 
+Step 4. Connect to the apache server 
+Step 5. Try cole and Robbie like file names, find secrets.txt and /web/secrets.txt
+Step 6. From web add /.ssh into the url gain RSA key 
+Step 7. SSH into their ip with their user and RSA password encrypted
+Got in! you now have access to a command shell.
