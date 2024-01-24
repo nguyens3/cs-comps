@@ -1,1 +1,10 @@
+Setup an FTP vulnerable virtual machine 
 
+1. Download FTP 
+2. Open the FTP server
+3. go into the FTP server config file and allow for anon directory creation and file creation 
+4. Boot FTP 
+5. log in using anonymous and any password
+6. place password to vm 
+7. login using slab and password found
+Root access gained
