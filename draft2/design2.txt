@@ -1,0 +1,48 @@
+Target Design, Draft 2
+Security Comps, Winter 2024
+
+<----- Scenario ----->
+- Company name: Worst Purchase
+- What is it? a multi-level retail company with many different roles
+- This company offers various products for purchase
+
+<----- To Do ----->
+1. Make Webapp
+2. Make SQL databases
+
+<----- Proposal ----->
+1. SQL injection
+- the website has a product page with a search bar
+- this product page is linked with a SQL database with a table of all products
+- on each product listed, there is a Seller ID indicating who is selling the product (sellers may be random people or employees)
+- this indicates that there are multiple tables within our database (product table, seller table, etc. )
+- the search bar which is backed by a SQL query allows for SQL injection
+-- we can do a union sql injection, combining the search for products with the products table to the search for sellers
+- this sellers table contains the username and encrypted passwords of the sellers
+-- some of these sellers are also employees and some of these employees use the same password as a seller and an employee
+- looking at the employee page on the website the attacker can figure out which employee would be most useful to 'hack'
+-- sprinkle little crumbs around the site to indicate what type of encryption was used (ex. "sponsered by base64, sha256...")
+-- can also put encyrption key in the cookies of the site
+- the attacker can then unencrypt the password of the correct employee from the list of sellers
+- the attacker now has the username and password of an employee's account
+-- this employee has access to the list of ex-employees and their changed 'temp' passwords
+-- using this username and temp password can get into a shell of ex-employee
+
+2. Third Party Vulnerability (log4j)
+- now that the attacker has access to the list of ex-employees and their changed passwords, one of these ex-employees was a web developer
+- the attacker escalates in permissions and now has the permissions of the web developer
+- the ex-web developer still has access to all the sites web code and log4j (html, js, css)
+- look through the logs ???
+-- get credentials allowing us to get into a ceo specific website
+-- this ceo specific page has different functionalities including an opportunity to upload files (reports, info, etc.)
+
+3. File injection
+- the upload portal provides the opportunity to do a file injection
+- the attacker would need to create a malicious file (php command injection?) to upload onto the site
+- because of this malicious file, the attacker has command line access through url
+-- with command line access can try to find ssh keys
+- use ssh key to ssh into ceo shell account
+
+- from the ceo shell account, sudo and gain root access
+- within the root account, there are secret damaging to the company
+- the end
