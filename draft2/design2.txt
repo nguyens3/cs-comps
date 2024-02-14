@@ -1,14 +1,33 @@
 Target Design, Draft 2
+Ashok Khare, Sydney Nguyen, Kimberly Yip
 Security Comps, Winter 2024
+
+<----- Abstract ----->
+The three main vulnerabilities involved in our design are SQL injection, log4shell, and file upload injection. 
+Strung together, these vulnerabilities will allow for privilege escalation, leading to root access. 
+
+<----- Step-by-step ----->
+1. SQL injection to gain some employee username and encrypted passwords
+2. unencrypt passwords for correct employee and gain IT employee access
+3. find undeleted account for ex-web developer and gain access to all web development code
+4. log4shell vulnerability to gain ceo credentials
+5. file upload attack on ceo specific upload page
+6. gain root access and access to sensitive files
+
+<----- Description of current implementation status ----->
+Currently, we have the bases for our web app and psql database set.
+We have a partial implementation of the SQL injection.
+Our next steps include restricting user input to make the SQL vulnerability more complex than it currently is.
+We are also starting to pivot to implementing log4shell, although more research needs to be done. 
+
+<----- Deeper dive topic ----->
+Our intention is to do a deep dive on the log4shell vulnerability, a zero-day vulnerability in log4J that allowed hackers to run malicious code on affected systems.
+We may also explore SQL injections and file upload attacks. 
 
 <----- Scenario ----->
 - Company name: Worst Purchase
 - What is it? a multi-level retail company with many different roles
 - This company offers various products for purchase
-
-<----- To Do ----->
-1. Make Webapp
-2. Make SQL databases
 
 <----- Proposal ----->
 1. SQL injection
@@ -42,7 +61,6 @@ Security Comps, Winter 2024
 - because of this malicious file, the attacker has command line access through url
 -- with command line access can try to find ssh keys
 - use ssh key to ssh into ceo shell account
-
 - from the ceo shell account, sudo and gain root access
 - within the root account, there are secret damaging to the company
 - the end
